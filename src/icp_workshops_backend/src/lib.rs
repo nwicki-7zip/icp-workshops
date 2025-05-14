@@ -1,4 +1,8 @@
 #[ic_cdk::query]
+fn greet(name: string) -> String{
+    format!("Hello, {}!", name)
+}
+
 fn calculate(a: i32, b: i32, operator: String) -> String {
     let result = match operator.as_str(){
         "+" => Some(a+b),
